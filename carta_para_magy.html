@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta para ti</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f6f4f2;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      text-align: center;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 450px;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .initial {
+      font-size: 60px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #555; }
+    .letter {
+      display: none;
+      margin-top: 20px;
+      font-size: 17px;
+      line-height: 1.6;
+      animation: fadeIn 1.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="initial">M</div>
+    <div style="font-size:18px; font-weight:300; margin-top:-10px; letter-spacing:1px; opacity:0.8;">Para Magy</div>
+    <p style="font-size:17px; opacity:0.85;">Una pequeña sorpresa hecha con el corazón, con un toque suave como una canción de Paulo Londra.</p>
+    <button onclick="mostrarCarta()">Abrir carta</button>
+    <div id="letter" class="letter">
+      Hoy quise escribirte algo que naciera con la misma calma con la que llegan las cosas bonitas, esas que no se buscan pero aparecen.<br><br>
+      A veces siento que hay momentos que se guardan solos, como si el día quisiera recordarte que todavía existen personas que iluminan sin darse cuenta. Y hoy, Magy, ese momento fuiste tú.<br><br>
+      Hay algo en tu forma de ser, algo suave, como canción country en carretera: sencilla, honesta, con esa vibra que hace que uno quiera seguir escuchando un poco más.<br><br>
+      No sé si fue tu sonrisa, tu energía o simplemente la manera en que el tiempo pareció volverse más ligero cuando hablamos… pero lo sentí. Algo auténtico, algo que vale la pena recordar.<br><br>
+      Esta carta no busca ser intensa, solo sincera. Es mi forma de decirte que me gustó conocerte, y que me encantaría seguir descubriendo lo que hay detrás de esa mirada tranquila que dice más de lo que muestra.<br><br>
+      Sin prisa, sin presión. Solo con esa naturalidad bonita de las cosas que nacen solas.
+    </div>
+    <div style="margin-top:30px; font-size:16px; opacity:0.7; font-style:italic;">— C. A.</div>
+  </div>
+
+  <script>
+    function mostrarCarta() {
+      document.getElementById('letter').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
